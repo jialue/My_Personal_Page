@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>The Tank</title>
+	<link rel="shortcut icon" href="file:///C:/Users/Jialue/Dropbox/html/personal_website/Robockey/tank/images/favicon.ico" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta name="robots" content="all" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+	<style>
+		* { padding: 0; margin: 0; }
+		body { background-color: #333; }
+		p { color: #fff; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+		a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
+		a:hover { color: #990000; border-bottom: 1px solid rgba(255,255,255,1); }
+		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
+		#about { width: 360px; padding: 0 0 0 150px; margin: -35px 50px 0 auto !important; }
+		@media (max-width: 767px) {
+			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
+			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
+			background-image { opacity: 0.2; }
+		}
+	</style>
+</head>	
+    
+<body>
+
+<!-- swap out for a logo -->
+<div id="monogram">
+	<img src="./images/monogram.png" />
+</div>
+
+<!-- swap out for information about yourself -->
+<div id="about">
+	<p>The Tank is the most powerful robot in our team and also the most impressive design in the whole project. It could both goal and defense.<p>
+	<p>Not like other two robots, Tank is not using wheels but tankbands, which give the Tank excellent adhesion to the ground. Meanwhile, the tank includes 22 pieces of clear acrylic, motivated by motors(3 for each side). Although each piece of acylic is thin and kind of fragile but hard. However, the mechanical body could be robust and able to stand the impact of collision with a wall or a robot with its full speed.<p>
+	<p>The high power version Tank is equipped by 6 high power <a href="http://www.pololu.com/catalog/product/2361">Micro Metal Gearmotors</a> whose gear ratios are 75:1. Plus the tankbands, the Tank is fast, mighty and stable.<p> 
+	<p><a href="design_tank.html">Click here to see more detail about the design</a><p>
+</div>
+
+<!--include jquery & backstretch-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.backstretch.min.js"></script>
+<script type="text/javascript">
+$(function(){
+     $(window).resize(function(){
+         if($(this).width() >= 767){
+             $.backstretch("./images/nh_bg.jpg", {speed: 150});
+         }
+      })
+      .resize();//trigger resize on page load
+});
+</script>
+
+</body>	
+</html>
