@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Tank</title>
+	<link rel="shortcut icon" href="http://www.seas.upenn.edu/~jialue/img/favicon.ico" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta name="robots" content="all" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta http-equiv="imagetoolbar" content="false" />	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+	<style>
+		* { padding: 0; margin: 0; }
+		body { background-color: #333; margin-bottom: 50px; }
+		h2 { color: rgba(255,255,255,0.2); font-family: "eskapade-fraktur",Helvetica; font-size: 34px; }
+		p { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 22px; line-height: 32px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+		a { color: #fff; font-weight: 600; text-decoration: none; padding-bottom: -1px !important; border-bottom: 3px solid rgba(255,255,255,0.3); }
+		strong { font-weight: 600; }
+		a:hover { color: #fff; border-bottom: 3px solid rgba(255,255,255,1); }
+		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
+		#about { width: 450px; margin: 50px auto 0 50px !important; }
+		.initials { opacity: 0.8; }
+		small { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 14px; -webkit-font-smoothing: antialiased; }
+		@media (max-width: 767px) { 
+			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
+			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
+			.backstretch { opacity: 0.2; }
+
+		}
+	</style>
+	<script type="text/javascript" src="//use.typekit.net/vbt2ryy.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>	
+    
+<body>
+
+<!-- swap out for a logo -->
+<div id="monogram">
+	<img src="./img/logo_JH.png" />
+</div>
+
+<!-- swap out for information about yourself -->
+<div id="about">
+	<p>Robockey is the final project of MEAM 510, which is the most challenging project I ever had. Learn more about <a target='_blank'  class='urllink' href='http://online.qmags.com/RAM0910/default.aspx?pg=80&amp;mode=2' rel='nofollow'>The Robockey Cup</a> from Dr. Jonathon Fiene.<p>
+	<p>Each team needs to build three robots to play hochey games without mannual control. Robots are equipped with sensors to detect the IR light from the puck and find it.<p>
+	<p>Learn more about our robots:<p>
+	<p><a href="rb.html">Running Back</a><p>
+	<p><a href="tank.html">Tank</a><p>
+	<p><a href="gk.html">Goal Keeper</a><p>
+</div>
+
+<!--include jquery & backstretch-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.backstretch.min.js"></script>
+
+
+<!-- This is for one pic background
+<script type="text/javascript">
+$(function(){
+     $(window).resize(function(){
+         if($(this).width() >= 767){
+             $.backstretch("./img/portait.jpg", {speed: 150});
+         }
+      })
+      .resize();//trigger resize on page load
+});
+</script>
+-->
+
+<!--This is for multi pics background-->
+<script>
+    // Create an array of images that you'd like to use
+    var images = [
+        "img/index_bg.jpg",
+		"img/rb_bg.jpg",
+		"img/tank_bg.jpg",
+		"img/gk_bg.jpg"
+    ];
+    
+    // A little script for preloading all of the images
+    // It's not necessary, but generally a good idea
+    $(images).each(function(){
+       $('<img/>')[0].src = this; 
+    });
+    
+    // The index variable will keep track of which image is currently showing
+    var index = 0;
+    
+    // Call backstretch for the first time,
+    // In this case, I'm settings speed of 500ms for a fadeIn effect between images.
+    $.backstretch(images[index], {speed: 500});
+    
+    // Set an interval that increments the index and sets the new image
+    // Note: The fadeIn speed set above will be inherited
+    setInterval(function() {
+        index = (index >= images.length - 1) ? 0 : index + 1;
+        $.backstretch(images[index]);
+    }, 5000);
+</script>
+
+
+</body>	
+</html>
