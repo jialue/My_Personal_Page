@@ -3,7 +3,7 @@
 <head>
 	
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>The Tank</title>
+	<title>My Robockey</title>
 	<link rel="shortcut icon" href="http://www.seas.upenn.edu/~jialue/img/favicon.ico" />
 	<meta http-equiv="pragma" content="no-cache" />
 	<meta name="robots" content="all" />
@@ -15,21 +15,26 @@
 	<![endif]-->	
 	<style>
 		* { padding: 0; margin: 0; }
-		body { background-color: #333; }
-		p { color: #fff; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
-		a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
-		a:hover { color: #990000; border-bottom: 1px solid rgba(255,255,255,1); }
-		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
-		#about { width: 360px; padding: 0 0 0 150px; margin: -35px 50px 0 auto !important; }
-		@media (max-width: 767px) {
+		body { background-color: #333; margin-bottom: 50px; }
+		h2 { color: rgba(255,255,255,0.2); font-family: "eskapade-fraktur",Helvetica; font-size: 34px; }
+		p { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 18px; line-height: 28px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+		a { color: #fff; font-weight: 600; text-decoration: none; padding-bottom: -1px !important; border-bottom: 3px solid rgba(255,255,255,0.3); }
+		strong { font-weight: 600; }
+		a:hover { color: #fff; border-bottom: 3px solid rgba(255,255,255,1); }
+		#monogram { width: 50px; padding: 20px 0 0 0; margin: 0 auto 0 50px; }
+		#about { width: 450px; margin: 50px auto 0 50px !important; }
+		.initials { opacity: 0.8; }
+		small { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 14px; -webkit-font-smoothing: antialiased; }
+		@media (max-width: 767px) { 
 			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
 			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
-			background-image { opacity: 0.2; }
+			.backstretch { opacity: 0.2; }
 		}
 	</style>
 </head>	
     
 <body>
+
 
 <!-- swap out for a logo -->
 <div id="monogram">
@@ -58,6 +63,36 @@ $(function(){
       })
       .resize();//trigger resize on page load
 });
+</script>
+
+<!--This is for multi pics background-->
+<script>
+    // Create an array of images that you'd like to use
+    var images = [
+		"img/rb_bg.jpg",
+		"img/tank_bg.jpg",
+		"img/gk_bg.jpg"
+    ];
+    
+    // A little script for preloading all of the images
+    // It's not necessary, but generally a good idea
+    $(images).each(function(){
+       $('<img/>')[0].src = this; 
+    });
+    
+    // The index variable will keep track of which image is currently showing
+    var index = 0;
+    
+    // Call backstretch for the first time,
+    // In this case, I'm settings speed of 500ms for a fadeIn effect between images.
+    $.backstretch(images[index], {speed: 500});
+    
+    // Set an interval that increments the index and sets the new image
+    // Note: The fadeIn speed set above will be inherited
+    setInterval(function() {
+        index = (index >= images.length - 1) ? 0 : index + 1;
+        $.backstretch(images[index]);
+    }, 5000);
 </script>
 
 </body>	

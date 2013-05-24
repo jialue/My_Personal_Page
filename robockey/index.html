@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -16,11 +17,12 @@
 	<style>
 		* { padding: 0; margin: 0; }
 		body { background-color: #333; margin-bottom: 50px; }
-		h2 { color: rgba(255,255,255,0.2); font-family: "eskapade-fraktur",Helvetica; font-size: 34px; }
-		p { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 22px; line-height: 32px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+		h2 { color: rgba(255,255,255,0.5); font-family: "eskapade-fraktur",Helvetica; font-size: 34px; }
+		p { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 18px; line-height: 28px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
 		a { color: #fff; font-weight: 600; text-decoration: none; padding-bottom: -1px !important; border-bottom: 3px solid rgba(255,255,255,0.3); }
 		strong { font-weight: 600; }
 		a:hover { color: #fff; border-bottom: 3px solid rgba(255,255,255,1); }
+		#masthead { position:fixed }
 		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
 		#about { width: 450px; margin: 50px auto 0 50px !important; }
 		.initials { opacity: 0.8; }
@@ -29,28 +31,73 @@
 			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
 			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
 			.backstretch { opacity: 0.2; }
-
 		}
 	</style>
-	<script type="text/javascript" src="//use.typekit.net/vbt2ryy.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<!--<script type="text/javascript" src="//use.typekit.net/vbt2ryy.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
 </head>	
     
 <body>
-
-<!-- swap out for a logo -->
-<div id="monogram">
-	<img src="./img/logo_JH.png" />
+<div id="masthead">
+<div class="container">
+	<div class="row">
+		<div class="span3">
+			<a class="logo" href="/"><img src="./img/logo_JH.png" /></a>
+		</div>
+		<div class="span9 right">
+			<ul class="nav">
+				<li class="work"><a href="#about_me">About Me</a></li>
+				<a href="#projects">Projects</a>
+				<li><a href="#memo">Gallery</a></li>
+				<li class="contact"><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
 </div>
 
+<!-- swap out for a logo -->
+<!--div id="monogram">
+	<img src="./img/logo_JH.png" />
+</div-->
+
 <!-- swap out for information about yourself -->
+<a name="projects"></a>
 <div id="about">
+	<h2>About Robockey</h2>
 	<p>Robockey is the final project of MEAM 510, which is the most challenging project I ever had. Learn more about <a target='_blank'  class='urllink' href='http://online.qmags.com/RAM0910/default.aspx?pg=80&amp;mode=2' rel='nofollow'>The Robockey Cup</a> from Dr. Jonathon Fiene.<p>
 	<p>Each team needs to build three robots to play hochey games without mannual control. Robots are equipped with sensors to detect the IR light from the puck and find it.<p>
 	<p>Learn more about our robots:<p>
-	<p><a href="rb.html">Running Back</a><p>
-	<p><a href="tank.html">Tank</a><p>
-	<p><a href="gk.html">Goal Keeper</a><p>
+	<p><a href="#rb">Running Back</a><p>
+	<p><a href="#tank">Tank</a><p>
+	<p><a href="#gk">Goal Keeper</a><p>
+</div>
+
+<a name="rb"></a>
+<div id="about">
+	<p>Running Back has the highest speed in the team. When it is running at its full speed, you may hardly catch it.<p>
+	<p>The aim for RB is to make it small, fast and smart, able to catch the puch and goal fast. To make it more aggressive, a small solinoid is added, attached with two capasitors. So it can shoot the puck when it finds itself at the right place.<p>
+	<p>RB is a regular two-wheel robot using ball caster as its third point. Its motors are 50:1 gear ratio high power <a href="http://www.pololu.com/catalog/product/998">Micro Metal Gearmotors</a>, which make it crazy when commanded with 100% PWM.<p> 
+	<p><a href="design_tank.html">More</a><p>
+	<p><a href="robockey_index.html">Back</a><p>
+</div>
+
+<a name="tank"></a>
+<div id="about">
+	<p>Tank is the most powerful robot in our team and also has the most impressive design in the whole project.<p>
+	<p>Not like any other robot in Robockey, Tank is not using wheels but tankbands, which give the Tank excellent grip. Meanwhile, the tank includes 22 pieces of clear acrylic, motivated by motors(3 for each side). Although each piece of acylic is thin and kind of fragile but hard. However, the mechanical body could be robust and able to stand the impact of collision with a wall or a robot with its full speed.<p>
+	<p>The high power version Tank is equipped by 6 high power <a href="http://www.pololu.com/catalog/product/2361">Micro Metal Gearmotors</a> whose gear ratios are 75:1. Plus the tankbands, the Tank is fast, mighty and stable. So long as it finds the puck, it will drive to goal with no mercy to whatever in its way.<p> 
+	<p><a href="design_tank.html">More</a><p>
+	<p><a href="robockey_index.html">Back</a><p>
+</div>
+
+<a name="tank"></a>
+<div id="about">
+	<p>Goal Keeper, the most powerful defender, which is also the largest and heaviest robot.<p>
+	<p>Although the 100:1 <a href="http://www.pololu.com/catalog/product/1101">Micro Metal Gearmotors</a> limit the speed of GK, but torque enables the monster to stop any robot trying to get through.	<p>
+	<p>To increase the grip, 2 pieces of iron is attached to it, it may get stuck but it will never step back.<p> 
+	<p><a href="design_tank.html">More</a><p>
+	<p><a href="robockey_index.html">Back</a><p>
 </div>
 
 <!--include jquery & backstretch-->

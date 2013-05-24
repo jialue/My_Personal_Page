@@ -1,0 +1,137 @@
+/* 
+* Chubby Grid 0.1
+* By Scott Robbin and Naz Hamid (http://weightshift.com)
+* 
+* Derived from www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+/*
+* To enable on mobile devices only, uncomment 'and (max-device-width: 1000px)'
+*/
+
+/* Media Queries
+================================================== */
+
+    /* iPad portrait / Mobile landscape / Mobile portrait */
+    @media only screen and (max-width: 959px) /* and (max-device-width: 1000px) */ {
+        
+    }
+    
+    /* iPad portrait */
+    @media only screen and (min-width: 768px) and (max-width: 959px) /* and (max-device-width: 1000px) */  {
+		.nav {  
+			font-size: 12px; 
+			letter-spacing: 0px;
+			padding: 0 10px 10px 10px;
+			margin: 29px -10px 0 -10px;
+			}
+		
+		#shopping-cart { margin: -52px 0 30px 0px; }
+		
+		.product-title { height: 26px; }
+		.products-item p.image { line-height: 230px; }
+		
+		.slideshow { width: 728px; height: 481px; }
+		
+		.post { padding: 30px 0px !important; margin-bottom: 30px; }
+		
+	}
+	
+	/* Mobile landscape / Mobile portrait */
+	@media only screen and (max-width: 767px) /* and (max-device-width: 1000px) */  {
+		
+			.logo { width: 15%; height: 15%; margin-top: -50px; margin-left: -260px; }
+		
+			#inner h1 { font-size: 16px; line-height: 20px; }
+			
+	    	.nav { 
+				width: 100%; 
+				font-size: 15px; 
+				text-align: center;
+				border-bottom: 0px; 
+				padding-bottom: 15px; 
+			}
+			
+			#home .nav { border-bottom: none; }
+			
+			#shopping-cart { margin: 0; }
+			#shopping-cart .five.chubby.columns { 
+				border-top: 1px solid #888b83; 
+				border-bottom: 1px dashed #888b83; 
+				padding: 10px 0px 0 0 !important;
+				text-align: center; 
+				margin: 0 auto 20px auto; 
+				}
+			#shopping-cart .five.chubby.columns p { margin-bottom: 10px; }
+			
+			.categories { line-height: 28px; margin-bottom: 20px; }
+			.categories a:hover { border: none; }
+			.categories a.active {
+				padding-bottom: 1px;
+				border-bottom: 1px solid;
+				}
+				
+			.tagline { display: none; height: 0; width: 0; }
+			
+			.pic img { display: none; width: 0; height: 0; }
+			
+			.prev-next { width: auto; text-align: center; margin: 0 auto 15px auto; }
+
+			.faq h4 em { display: none; }
+			
+			.post { padding: 30px 0 !important; margin-bottom: 30px; }
+			
+			
+	}
+	
+	/* Mobile landscape */
+    @media only screen and (min-width: 480px) and (max-width: 767px) /* and (max-device-width: 1000px) */  {
+			
+			.logo { width: 12%; height: 12%; margin-top: -50px; margin-left: -370px; }
+			
+			.nav { 
+				width: 380px; 
+				margin: 0; 
+				}
+				
+			ul.nav.primary { padding-left: 56px; margin-right: 0; }
+			ul.nav.secondary { float: left !important; margin-top: -30px; margin-left: -30px; padding-left: 0px; }
+			
+			.nav.primary li, .nav.secondary li { margin: 0 20px; }
+			
+			#shopping-cart .five.chubby.columns { 
+				width: 440px;
+			}
+			
+			.slideshow { width: 420px; height: 264px; }
+			
+			#cart-iframe p { width: 250px; text-align: center; }
+			
+    }
+    
+    /* Mobile portrait */
+    @media only screen and (max-width: 479px) /* and (max-device-width: 1000px) */  {
+	
+		.nav { 
+			width: 240px;
+			font-size: 13px;
+			margin: 0;
+        }
+
+		ul.nav.primary { padding-left: 48px; margin-right: 0; }
+		ul.nav.secondary { float: left; margin-top: -25px; padding-left: 21px; }
+ 
+		.nav.primary li, .nav.secondary li { margin: 0 10px; }
+		
+		.slideshow { width: 300px; height: 185px; }
+		
+		#footer .four.chubby.columns {  width: 300px; }
+		
+		#cart-iframe p { width: 250px; text-align: center; }
+		
+		
+    }
+    
+    
