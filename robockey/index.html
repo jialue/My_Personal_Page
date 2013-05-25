@@ -17,14 +17,28 @@
 	<style>
 		* { padding: 0; margin: 0; }
 		body { background-color: #333; margin-bottom: 50px; }
-		h2 { color: rgba(255,255,255,0.5); font-family: "eskapade-fraktur",Helvetica; font-size: 34px; }
+		h2 { color: rgba(255,255,255,0.5); font-family: "eskapade-fraktur",Helvetica; font-size: 25px; }	
 		p { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 18px; line-height: 28px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
 		a { color: #fff; font-weight: 600; text-decoration: none; padding-bottom: -1px !important; border-bottom: 3px solid rgba(255,255,255,0.3); }
-		strong { font-weight: 600; }
+		
+		ul#mylist ul { display: none; position: absolute; right: 110px; }
+		ul#mylist li:hover ul { display: inline; }
+		ul#mylist li li:hover ul { display: inline; }
+		ul#mylist li { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 18px;
+			width: 110px; line-height: 50px; list-style: none; text-align: right; }
+		ul#mylist li#more:hover { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 18px; width: 110px; line-height: 50px; list-style: none; text-align: right;
+			background-image: url(img/list-style-left.png); background-repeat: no-repeat; background-position: left; }
+		ul#mylist li li { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 15px;
+			width: 110px; line-height: 50px; list-style: none; text-align:right;}
+		ul#mylist li li#more:hover { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 15px;
+			width: 110px; line-height: 50px; list-style: none; background-image: url(img/list-style-left.png); background-repeat: no-repeat; background-position: left; text-align:right;}
+		
+		strong { font-weight: 600; width:120px; }
 		a:hover { color: #fff; border-bottom: 3px solid rgba(255,255,255,1); }
-		#masthead { position:fixed }
+		#masthead { position: fixed; right: 100px; top: 50px; color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 18px; line-height: 28px; }
 		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
 		#about { width: 450px; margin: 50px auto 0 50px !important; }
+		#aboutme { width: 450px; margin: 50px auto 0 50px !important; }
 		.initials { opacity: 0.8; }
 		small { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 14px; -webkit-font-smoothing: antialiased; }
 		@media (max-width: 767px) { 
@@ -38,32 +52,46 @@
 </head>	
     
 <body>
-<div id="masthead">
-<div class="container">
-	<div class="row">
-		<div class="span3">
-			<a class="logo" href="/"><img src="./img/logo_JH.png" /></a>
-		</div>
-		<div class="span9 right">
-			<ul class="nav">
-				<li class="work"><a href="#about_me">About Me</a></li>
-				<a href="#projects">Projects</a>
-				<li><a href="#memo">Gallery</a></li>
-				<li class="contact"><a href="#contact">Contact</a></li>
+<div id="masthead"; align="center">	
+	<img src="./img/logo_JH.png" />
+	<ul id="mylist">
+		<li><a href="#about_me">About Me</a></li>
+		<li id="more"><a href="#projects">Projects</a>
+			<ul>
+				<li><a href="#robockey">Quadrotors</a></li>
+				<li><a href="#robockey">NerFPS</a></li>
+				<li id="more"><a href="#robockey">Robockey</a></li>
+					<ul>
+						<li><a href="#rb">Running Back</a></li>
+						<li><a href="#tank">Running Back</a></li>
+						<li><a href="#gk">Running Back</a></li>
+					</ul>
+				<li><a href="#robockey">Acrobat</a></li>
 			</ul>
-		</div>
-	</div>
+		</li>
+		<li><a href="#memo">Gallery</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
 </div>
-</div>
-
 <!-- swap out for a logo -->
 <!--div id="monogram">
 	<img src="./img/logo_JH.png" />
 </div-->
 
 <!-- swap out for information about yourself -->
-<a name="projects"></a>
+
+
+<div id="aboutme">
+	<a name="about_me"></a>
+	<h2>About Me</h2>
+	<p>************************************</p>
+	<p>************************************</p>
+	<p>************************************</p>
+	<p>************************************</p>
+</div>
+
 <div id="about">
+	<a name="projects"></a>
 	<h2>About Robockey</h2>
 	<p>Robockey is the final project of MEAM 510, which is the most challenging project I ever had. Learn more about <a target='_blank'  class='urllink' href='http://online.qmags.com/RAM0910/default.aspx?pg=80&amp;mode=2' rel='nofollow'>The Robockey Cup</a> from Dr. Jonathon Fiene.<p>
 	<p>Each team needs to build three robots to play hochey games without mannual control. Robots are equipped with sensors to detect the IR light from the puck and find it.<p>
@@ -73,8 +101,10 @@
 	<p><a href="#gk">Goal Keeper</a><p>
 </div>
 
-<a name="rb"></a>
+
 <div id="about">
+	<a name="rb"></a>
+	<h2>Running Back</h2>
 	<p>Running Back has the highest speed in the team. When it is running at its full speed, you may hardly catch it.<p>
 	<p>The aim for RB is to make it small, fast and smart, able to catch the puch and goal fast. To make it more aggressive, a small solinoid is added, attached with two capasitors. So it can shoot the puck when it finds itself at the right place.<p>
 	<p>RB is a regular two-wheel robot using ball caster as its third point. Its motors are 50:1 gear ratio high power <a href="http://www.pololu.com/catalog/product/998">Micro Metal Gearmotors</a>, which make it crazy when commanded with 100% PWM.<p> 
@@ -82,8 +112,10 @@
 	<p><a href="robockey_index.html">Back</a><p>
 </div>
 
-<a name="tank"></a>
+
 <div id="about">
+	<a name="tank"></a>
+	<h2>Tank</h2>
 	<p>Tank is the most powerful robot in our team and also has the most impressive design in the whole project.<p>
 	<p>Not like any other robot in Robockey, Tank is not using wheels but tankbands, which give the Tank excellent grip. Meanwhile, the tank includes 22 pieces of clear acrylic, motivated by motors(3 for each side). Although each piece of acylic is thin and kind of fragile but hard. However, the mechanical body could be robust and able to stand the impact of collision with a wall or a robot with its full speed.<p>
 	<p>The high power version Tank is equipped by 6 high power <a href="http://www.pololu.com/catalog/product/2361">Micro Metal Gearmotors</a> whose gear ratios are 75:1. Plus the tankbands, the Tank is fast, mighty and stable. So long as it finds the puck, it will drive to goal with no mercy to whatever in its way.<p> 
@@ -91,14 +123,21 @@
 	<p><a href="robockey_index.html">Back</a><p>
 </div>
 
-<a name="tank"></a>
+
 <div id="about">
+	<a name="tank"></a>
+	<h2>Goal Keeper</h2>
 	<p>Goal Keeper, the most powerful defender, which is also the largest and heaviest robot.<p>
 	<p>Although the 100:1 <a href="http://www.pololu.com/catalog/product/1101">Micro Metal Gearmotors</a> limit the speed of GK, but torque enables the monster to stop any robot trying to get through.	<p>
 	<p>To increase the grip, 2 pieces of iron is attached to it, it may get stuck but it will never step back.<p> 
 	<p><a href="design_tank.html">More</a><p>
 	<p><a href="robockey_index.html">Back</a><p>
 </div>
+
+<div id="contact">
+	<>
+
+
 
 <!--include jquery & backstretch-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
