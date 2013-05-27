@@ -4,7 +4,7 @@
 <head>
 	
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Tank</title>
+	<title>Jialue Huang</title>
 	<link rel="shortcut icon" href="http://www.seas.upenn.edu/~jialue/img/favicon.ico" />
 	<meta http-equiv="pragma" content="no-cache" />
 	<meta name="robots" content="all" />
@@ -14,24 +14,28 @@
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->	
-	<style>
+	<style type="text/css">
 		* { padding: 0; margin: 0; }
 		body { background-color: #333; margin-bottom: 50px; }
 		h2 { color: rgba(255,255,255,0.5); font-family: "eskapade-fraktur",Helvetica; font-size: 25px; }	
 		p { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 18px; line-height: 28px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
 		a { color: #fff; font-weight: 600; text-decoration: none; padding-bottom: -1px !important; border-bottom: 3px solid rgba(255,255,255,0.3); }
 		
-		ul#mylist ul { display: none; position: absolute; right: 110px; }
-		ul#mylist li:hover ul { display: inline; }
-		ul#mylist li li:hover ul { display: inline; }
-		ul#mylist li { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 18px;
-			width: 110px; line-height: 50px; list-style: none; text-align: right; }
-		ul#mylist li#more:hover { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 18px; width: 110px; line-height: 50px; list-style: none; text-align: right;
-			background-image: url(img/list-style-left.png); background-repeat: no-repeat; background-position: left; }
-		ul#mylist li li { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 15px;
-			width: 110px; line-height: 50px; list-style: none; text-align:right;}
-		ul#mylist li li#more:hover { color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 15px;
-			width: 110px; line-height: 50px; list-style: none; background-image: url(img/list-style-left.png); background-repeat: no-repeat; background-position: left; text-align:right;}
+		/* common styling */
+		.menu ul li {color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 18px;
+			width: 110px; line-height: 50px; list-style: none; text-align: right;}
+		.menu ul li ul li {color: #fff; font-family: "eskapade-fraktur",Helvetica; font-size: 15px;
+			width: 110px; line-height: 50px; list-style: none; text-align: right;}
+		.menu ul li ul {display: none;}
+		.menu ul li ul li ul {display: none;}
+		/* specific to non IE browsers */
+		.menu ul li:hover ul { position:absolute; right: 110px; top: 138px;}
+		.menu ul li ul li:hover ul { position:absolute; right: 110px; top: 100px;}
+		.menu ul li#more:hover { list-style: none; background-image: url(img/list-style-left.png);
+			background-repeat: no-repeat; background-position: left; text-align:right; }
+		.menu ul li ul li#more:hover { list-style: none; background-image: url(img/list-style-left.png);
+			background-repeat: no-repeat; background-position: left; text-align:right; }
+
 		
 		strong { font-weight: 600; width:120px; }
 		a:hover { color: #fff; border-bottom: 3px solid rgba(255,255,255,1); }
@@ -47,25 +51,38 @@
 			.backstretch { opacity: 0.2; }
 		}
 	</style>
-	<!--<script type="text/javascript" src="//use.typekit.net/vbt2ryy.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
+	
+	<script type="text/javascript">
+        function displaySubMenu(li) {
+            var subMenu = li.getElementsByTagName("ul")[0];
+            subMenu.style.display = "block";
+        }
+        function hideSubMenu(li) {
+            var subMenu = li.getElementsByTagName("ul")[0];
+            subMenu.style.display = "none";
+        }
+    </script>
+	
+	<script type="text/javascript" src="//use.typekit.net/vbt2ryy.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>	
     
 <body>
-<div id="masthead"; align="center">	
+<div id="masthead"; align="center"; class="menu">	
 	<img src="./img/logo_JH.png" />
-	<ul id="mylist">
+	<ul>
 		<li><a href="#about_me">About Me</a></li>
-		<li id="more"><a href="#projects">Projects</a>
+		<li id="more" onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#projects">Projects</a>
 			<ul>
 				<li><a href="#robockey">Quadrotors</a></li>
 				<li><a href="#robockey">NerFPS</a></li>
-				<li id="more"><a href="#robockey">Robockey</a></li>
+				<li id="more" onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#robockey">Robockey</a>
 					<ul>
 						<li><a href="#rb">Running Back</a></li>
-						<li><a href="#tank">Running Back</a></li>
-						<li><a href="#gk">Running Back</a></li>
+						<li><a href="#tank">Tank</a></li>
+						<li><a href="#gk">Goal Keeper</a></li>
 					</ul>
+				</li>
 				<li><a href="#robockey">Acrobat</a></li>
 			</ul>
 		</li>
@@ -84,14 +101,13 @@
 <div id="aboutme">
 	<a name="about_me"></a>
 	<h2>About Me</h2>
-	<p>************************************</p>
-	<p>************************************</p>
-	<p>************************************</p>
-	<p>************************************</p>
+	<p>Welcome to my website!</p>
+	<p>Although it's still in process, you can check out the things already online. Hope you like what I have done. Thanks for your visit!</p>
 </div>
 
 <div id="about">
 	<a name="projects"></a>
+	<a name="robockey"></a>
 	<h2>About Robockey</h2>
 	<p>Robockey is the final project of MEAM 510, which is the most challenging project I ever had. Learn more about <a target='_blank'  class='urllink' href='http://online.qmags.com/RAM0910/default.aspx?pg=80&amp;mode=2' rel='nofollow'>The Robockey Cup</a> from Dr. Jonathon Fiene.<p>
 	<p>Each team needs to build three robots to play hochey games without mannual control. Robots are equipped with sensors to detect the IR light from the puck and find it.<p>
@@ -108,8 +124,7 @@
 	<p>Running Back has the highest speed in the team. When it is running at its full speed, you may hardly catch it.<p>
 	<p>The aim for RB is to make it small, fast and smart, able to catch the puch and goal fast. To make it more aggressive, a small solinoid is added, attached with two capasitors. So it can shoot the puck when it finds itself at the right place.<p>
 	<p>RB is a regular two-wheel robot using ball caster as its third point. Its motors are 50:1 gear ratio high power <a href="http://www.pololu.com/catalog/product/998">Micro Metal Gearmotors</a>, which make it crazy when commanded with 100% PWM.<p> 
-	<p><a href="design_tank.html">More</a><p>
-	<p><a href="robockey_index.html">Back</a><p>
+	<p><a href="#about_me">Top</a><p>
 </div>
 
 
@@ -119,19 +134,17 @@
 	<p>Tank is the most powerful robot in our team and also has the most impressive design in the whole project.<p>
 	<p>Not like any other robot in Robockey, Tank is not using wheels but tankbands, which give the Tank excellent grip. Meanwhile, the tank includes 22 pieces of clear acrylic, motivated by motors(3 for each side). Although each piece of acylic is thin and kind of fragile but hard. However, the mechanical body could be robust and able to stand the impact of collision with a wall or a robot with its full speed.<p>
 	<p>The high power version Tank is equipped by 6 high power <a href="http://www.pololu.com/catalog/product/2361">Micro Metal Gearmotors</a> whose gear ratios are 75:1. Plus the tankbands, the Tank is fast, mighty and stable. So long as it finds the puck, it will drive to goal with no mercy to whatever in its way.<p> 
-	<p><a href="design_tank.html">More</a><p>
-	<p><a href="robockey_index.html">Back</a><p>
+	<p><a href="#about_me">Top</a><p>
 </div>
 
 
 <div id="about">
-	<a name="tank"></a>
+	<a name="gk"></a>
 	<h2>Goal Keeper</h2>
 	<p>Goal Keeper, the most powerful defender, which is also the largest and heaviest robot.<p>
 	<p>Although the 100:1 <a href="http://www.pololu.com/catalog/product/1101">Micro Metal Gearmotors</a> limit the speed of GK, but torque enables the monster to stop any robot trying to get through.	<p>
 	<p>To increase the grip, 2 pieces of iron is attached to it, it may get stuck but it will never step back.<p> 
-	<p><a href="design_tank.html">More</a><p>
-	<p><a href="robockey_index.html">Back</a><p>
+	<p><a href="#about_me">Top</a><p>
 </div>
 
 <div id="contact">
@@ -161,7 +174,6 @@ $(function(){
 <script>
     // Create an array of images that you'd like to use
     var images = [
-        "img/index_bg.jpg",
 		"img/rb_bg.jpg",
 		"img/tank_bg.jpg",
 		"img/gk_bg.jpg"
