@@ -74,7 +74,7 @@
 		<li><a href="#about_me">About Me</a></li>
 		<li id="more" onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#projects">Projects</a>
 			<ul>
-				<li><a href="#robockey">Quadrotors</a></li>
+				<li><a href="#quadrotors">Quadrotors</a></li>
 				<li><a href="#robockey">NerFPS</a></li>
 				<li id="more" onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#robockey">Robockey</a>
 					<ul>
@@ -102,11 +102,24 @@
 	<a name="about_me"></a>
 	<h2>About Me</h2>
 	<p>Welcome to my website!</p>
-	<p>Although it's still in process, you can check out the things already online. Hope you like what I have done. Thanks for your visit!</p>
+	<p>Although it's still in process, you can check out the things already online. Hope you like what I have done. Enjoy your visit!</p>
+</div>
+
+<a name="projects"></a>
+
+<div id="about">
+	<a name="quadrotors"></a>
+	<h2>Quadrotors</h2>
+	<p>In this project, a controller was developed to enable the quadrotors fly along planned path automatically.</p>
+	<p>In the first part, A path planning simulation for 3D map was implemented in Matlab with dijkstra and A* algorithm. Meanwhile, a PD controller was applied to control the quadrotors based on the pose estimation from the Vicon System.</p>
+	<p>The second part was to develop a contoller based on vision instead of Vicon System, in which the project was divided into image processing, pose estimation and digital filter implementation.</p>
+	<p><img src="./img/youtube_ico.png" /><a href="https://www.youtube.com/watch?feature=player_embedded&v=ljSbrldPSe4" target="_blank">	Demo based on Vicon System</a>.</p>
+	<p><img src="./img/youtube_ico.png" /><a href="https://www.youtube.com/watch?v=4i-bYuPagfk" target="_blank">	Demo based on Vision</a>.</p>
+	<p><a href="#about_me">Top</a><p>
 </div>
 
 <div id="about">
-	<a name="projects"></a>
+	
 	<a name="robockey"></a>
 	<h2>About Robockey</h2>
 	<p>Robockey is the final project of MEAM 510, which is the most challenging project I ever had. Learn more about <a target='_blank'  class='urllink' href='http://online.qmags.com/RAM0910/default.aspx?pg=80&amp;mode=2' rel='nofollow'>The Robockey Cup</a> from Dr. Jonathon Fiene.<p>
@@ -147,13 +160,18 @@
 	<p><a href="#about_me">Top</a><p>
 </div>
 
-<div id="contact">
-	<>
-
+<div id="about">
+	<h2>Contact</h2>
+	<a name="contact"></a>
+	<p><img src="./img/phone_ico.png" />	(215)285-7155</p>
+	<p><img src="./img/email_ico.png" />	jialuehuang@gmail.com</p>
+	<p><img src="./img/linkedin_ico.png" /><a href="http://www.linkedin.com/pub/jialue-huang/62/a7a/965" target="_blank">	Linkedin</a></p>
+	<p><img src="./img/github_ico.png" /><a href="https://github.com/jialue" target="_blank">	GitHub</a></p>
+</div>
 
 
 <!--include jquery & backstretch-->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.backstretch.min.js"></script>
 
 
